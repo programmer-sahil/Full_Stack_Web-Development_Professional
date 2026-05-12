@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic setup for the student form project -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 3 - Student Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f7fee7;
+            color: #1f2937;
+            padding: 30px;
+        }
+
+        .page {
+            width: min(800px, 100%);
+            margin: 0 auto;
+        }
+
+        form,
+        .result {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 18px;
+            box-shadow: 0 14px 35px rgba(15, 23, 42, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        button {
+            border: 0;
+            border-radius: 8px;
+            background-color: #16a34a;
+            color: #ffffff;
+            padding: 12px 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <h1>Student Form</h1>
+
+        <!-- This form collects student information -->
+        <form id="studentForm">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" placeholder="Enter student name" required>
+
+            <label for="studentEmail">Email</label>
+            <input type="email" id="studentEmail" placeholder="Enter email" required>
+
+            <label for="courseName">Course</label>
+            <select id="courseName" required>
+                <option value="">Select a course</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+            </select>
+
+            <button type="submit">Submit Details</button>
+        </form>
+
+        <!-- Submitted data will appear here -->
+        <section class="result" id="result">
+            <h2>Submitted Data</h2>
+            <p>No data submitted yet.</p>
+        </section>
+    </main>
+
+    <script>
+        // These variables select the form and output area
+        const studentForm = document.getElementById("studentForm");
+        const result = document.getElementById("result");
+
+        // This function runs when the form is submitted
+        studentForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("studentName").value;
+            const email = document.getElementById("studentEmail").value;
+            const course = document.getElementById("courseName").value;
+
+            result.innerHTML = `
+                <h2>Submitted Data</h2>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Course:</strong> ${course}</p>
+            `;
+
+            studentForm.reset();
+        });
+    </script>
+</body>
+</html>

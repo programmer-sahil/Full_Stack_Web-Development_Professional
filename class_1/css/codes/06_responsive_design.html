@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #111827;
+        }
+
+        /* This layout shows content and sidebar on larger screens */
+        .page {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .content,
+        .sidebar {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+        }
+
+        .sidebar {
+            background-color: #eef2ff;
+        }
+
+        /* Media query changes layout on smaller screens */
+        @media (max-width: 700px) {
+            .page {
+                grid-template-columns: 1fr;
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- This section becomes mobile friendly with a media query -->
+    <div class="page">
+        <main class="content">
+            <h1>Responsive Web Design</h1>
+            <p>A responsive webpage looks good on mobile, tablet, and desktop screens.</p>
+        </main>
+
+        <aside class="sidebar">
+            <h2>Tip</h2>
+            <p>Use flexible layouts and media queries.</p>
+        </aside>
+    </div>
+</body>
+</html>

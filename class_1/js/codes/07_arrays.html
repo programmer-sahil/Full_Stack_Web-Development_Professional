@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecfeff;
+            padding: 30px;
+        }
+
+        .tag {
+            display: inline-block;
+            margin: 6px;
+            border-radius: 999px;
+            background-color: #cffafe;
+            color: #155e75;
+            padding: 8px 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <div id="skills"></div>
+
+    <script>
+        // An array stores multiple values in one variable
+        const skills = ["HTML", "CSS", "JavaScript"];
+        const skillsBox = document.getElementById("skills");
+
+        // This loop displays each skill from the array
+        for (let skill of skills) {
+            skillsBox.innerHTML += `<span class="tag">${skill}</span>`;
+        }
+    </script>
+</body>
+</html>

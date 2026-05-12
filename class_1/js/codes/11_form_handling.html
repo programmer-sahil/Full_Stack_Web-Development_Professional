@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0fdf4;
+            padding: 30px;
+        }
+
+        form,
+        .output {
+            max-width: 430px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        input,
+        button {
+            width: 100%;
+            padding: 11px;
+            margin-top: 8px;
+            margin-bottom: 14px;
+        }
+
+        button {
+            border: 0;
+            border-radius: 8px;
+            background-color: #16a34a;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Handling</h1>
+
+    <!-- This form collects student data -->
+    <form id="studentForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter name" required>
+
+        <label for="course">Course</label>
+        <input type="text" id="course" placeholder="Enter course" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="output" id="output">Submitted data will appear here.</div>
+
+    <script>
+        // Form submit event lets us handle user input with JavaScript
+        const studentForm = document.getElementById("studentForm");
+        const output = document.getElementById("output");
+
+        studentForm.addEventListener("submit", function (event) {
+            // This stops the browser from refreshing the page
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const course = document.getElementById("course").value;
+
+            output.innerHTML = `<strong>${name}</strong> enrolled in <strong>${course}</strong>.`;
+        });
+    </script>
+</body>
+</html>

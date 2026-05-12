@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic setup for a responsive webpage -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined HTML CSS JavaScript Demo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #111827;
+        }
+
+        /* Header introduces the page */
+        header {
+            background-color: #2563eb;
+            color: #ffffff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        main {
+            width: min(900px, 92%);
+            margin: 30px auto;
+        }
+
+        /* Grid layout keeps cards clean and responsive */
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .topic-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+        }
+
+        .demo-box {
+            margin-top: 24px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 22px;
+        }
+
+        button {
+            border: 0;
+            border-radius: 8px;
+            background-color: #16a34a;
+            color: #ffffff;
+            padding: 12px 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media (max-width: 750px) {
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Semantic header section -->
+    <header>
+        <h1>Class 1 Combined Demo</h1>
+        <p>HTML gives structure, CSS gives style, and JavaScript gives interaction.</p>
+    </header>
+
+    <!-- Main content of the page -->
+    <main>
+        <section class="topic-grid">
+            <article class="topic-card">
+                <h2>HTML</h2>
+                <p>Creates the content and structure of the page.</p>
+            </article>
+
+            <article class="topic-card">
+                <h2>CSS</h2>
+                <p>Controls colors, layout, spacing, and responsiveness.</p>
+            </article>
+
+            <article class="topic-card">
+                <h2>JavaScript</h2>
+                <p>Adds decisions, events, and dynamic updates.</p>
+            </article>
+        </section>
+
+        <!-- JavaScript will update this message -->
+        <section class="demo-box">
+            <h2>Interactive Demo</h2>
+            <p id="message">Click the button to update this text.</p>
+            <button type="button" id="changeButton">Update Message</button>
+        </section>
+    </main>
+
+    <script>
+        // This function runs when the button is clicked
+        document.getElementById("changeButton").addEventListener("click", function () {
+            document.getElementById("message").textContent =
+                "Great! You just used DOM selection and an event listener.";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage Basics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf2f8;
+            padding: 30px;
+        }
+
+        .box {
+            max-width: 430px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        input,
+        button {
+            width: 100%;
+            padding: 11px;
+            margin-top: 10px;
+        }
+
+        button {
+            border: 0;
+            border-radius: 8px;
+            background-color: #db2777;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>localStorage</h1>
+        <p id="savedName">No saved name yet.</p>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button type="button" id="saveButton">Save Name</button>
+    </div>
+
+    <script>
+        // localStorage stores small data in the browser
+        const savedName = document.getElementById("savedName");
+        const nameInput = document.getElementById("nameInput");
+        const saveButton = document.getElementById("saveButton");
+
+        // This value remains even after page refresh
+        const existingName = localStorage.getItem("studentName");
+        if (existingName) {
+            savedName.textContent = "Saved name: " + existingName;
+        }
+
+        // This function saves the input value in localStorage
+        saveButton.addEventListener("click", function () {
+            localStorage.setItem("studentName", nameInput.value);
+            savedName.textContent = "Saved name: " + nameInput.value;
+            nameInput.value = "";
+        });
+    </script>
+</body>
+</html>

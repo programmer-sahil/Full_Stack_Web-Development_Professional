@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Element selector styles every matching tag */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            padding: 30px;
+        }
+
+        /* Class selector can be reused many times */
+        .highlight {
+            color: #0f766e;
+            font-weight: bold;
+        }
+
+        /* ID selector should be unique on a page */
+        #main-title {
+            color: #dc2626;
+            border-bottom: 2px solid #dc2626;
+            padding-bottom: 8px;
+        }
+
+        /* Descendant selector targets an element inside another element */
+        .card p {
+            line-height: 1.6;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 650px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+        }
+    </style>
+</head>
+<body>
+    <!-- This card demonstrates element, class, ID, and descendant selectors -->
+    <div class="card">
+        <h1 id="main-title">CSS Selectors</h1>
+        <p>A selector tells CSS which HTML element to style.</p>
+        <p class="highlight">Classes are reusable and very common in real projects.</p>
+    </div>
+</body>
+</html>

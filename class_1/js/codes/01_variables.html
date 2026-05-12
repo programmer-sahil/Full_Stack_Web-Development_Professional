@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f9ff;
+            padding: 30px;
+        }
+
+        .box {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>JavaScript Variables</h1>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        // Variables store data that we can use later
+        let studentName = "Ayesha";
+        const courseName = "Full Stack Web Development";
+
+        // This line shows variable values on the webpage
+        document.getElementById("output").textContent =
+            studentName + " is learning " + courseName + ".";
+    </script>
+</body>
+</html>

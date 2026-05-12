@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+
+    <!-- Forms collect user input -->
+    <form>
+        <!-- Label helps users understand the input field -->
+        <label for="studentName">Student Name</label><br>
+        <input type="text" id="studentName" name="studentName" placeholder="Enter your name"><br><br>
+
+        <label for="email">Email Address</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+
+        <label for="course">Choose Course</label><br>
+        <select id="course" name="course">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+        </select><br><br>
+
+        <!-- Button submits the form -->
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

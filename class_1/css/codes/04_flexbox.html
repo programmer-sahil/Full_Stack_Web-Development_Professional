@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecfeff;
+            padding: 30px;
+        }
+
+        /* Flexbox is useful for one-dimensional layouts */
+        .skills-row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        /* This class styles each skill item */
+        .skill {
+            background-color: #0891b2;
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 16px 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Layout</h1>
+
+    <!-- Flexbox arranges items in a row or column -->
+    <div class="skills-row">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React Ready</div>
+    </div>
+</body>
+</html>

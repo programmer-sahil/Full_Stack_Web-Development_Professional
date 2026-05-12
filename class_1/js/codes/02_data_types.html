@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7fee7;
+            padding: 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Types</h1>
+    <ul id="dataList"></ul>
+
+    <script>
+        // JavaScript values can have different data types
+        const studentName = "Rahul"; // string
+        const age = 20; // number
+        const isEnrolled = true; // boolean
+        const skills = ["HTML", "CSS", "JavaScript"]; // array
+        const student = { name: "Rahul", course: "Full Stack" }; // object
+
+        // This block displays the values and their types
+        const dataList = document.getElementById("dataList");
+        dataList.innerHTML = `
+            <li>Name: ${studentName} (${typeof studentName})</li>
+            <li>Age: ${age} (${typeof age})</li>
+            <li>Enrolled: ${isEnrolled} (${typeof isEnrolled})</li>
+            <li>Skills: ${skills.join(", ")} (array)</li>
+            <li>Student Course: ${student.course} (object)</li>
+        `;
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic setup for the counter project -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 2 - Simple Counter</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f9ff;
+            padding: 20px;
+        }
+
+        .counter-card {
+            width: 360px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 28px;
+            text-align: center;
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+        }
+
+        .count {
+            margin: 20px 0;
+            color: #2563eb;
+            font-size: 56px;
+            font-weight: bold;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            flex: 1;
+            border: 0;
+            border-radius: 8px;
+            padding: 12px;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .increase {
+            background-color: #16a34a;
+        }
+
+        .decrease {
+            background-color: #dc2626;
+        }
+
+        .reset {
+            background-color: #475569;
+        }
+    </style>
+</head>
+<body>
+    <!-- This card contains the counter UI -->
+    <main class="counter-card">
+        <h1>Simple Counter</h1>
+        <p class="count" id="count">0</p>
+
+        <div class="buttons">
+            <button class="increase" type="button" id="increaseButton">Increase</button>
+            <button class="decrease" type="button" id="decreaseButton">Decrease</button>
+            <button class="reset" type="button" id="resetButton">Reset</button>
+        </div>
+    </main>
+
+    <script>
+        // This variable stores the current count value
+        let count = 0;
+
+        // These variables select elements from the DOM
+        const countText = document.getElementById("count");
+        const increaseButton = document.getElementById("increaseButton");
+        const decreaseButton = document.getElementById("decreaseButton");
+        const resetButton = document.getElementById("resetButton");
+
+        // This function updates the visible count
+        function updateCount() {
+            countText.textContent = count;
+        }
+
+        // These event listeners run when buttons are clicked
+        increaseButton.addEventListener("click", function () {
+            count++;
+            updateCount();
+        });
+
+        decreaseButton.addEventListener("click", function () {
+            count--;
+            updateCount();
+        });
+
+        resetButton.addEventListener("click", function () {
+            count = 0;
+            updateCount();
+        });
+    </script>
+</body>
+</html>

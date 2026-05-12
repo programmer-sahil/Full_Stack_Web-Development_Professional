@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            padding: 30px;
+        }
+
+        .profile {
+            max-width: 420px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 22px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+        }
+    </style>
+</head>
+<body>
+    <h1>Objects</h1>
+    <div class="profile" id="profile"></div>
+
+    <script>
+        // An object stores related data using key-value pairs
+        const student = {
+            name: "Meera",
+            role: "Frontend Learner",
+            course: "Full Stack Web Development"
+        };
+
+        // This block displays object values on the page
+        document.getElementById("profile").innerHTML = `
+            <h2>${student.name}</h2>
+            <p>Role: ${student.role}</p>
+            <p>Course: ${student.course}</p>
+        `;
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic setup for the quiz webpage -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 5 - Class 1 Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main quiz app container -->
+    <main class="quiz-app">
+        <header class="quiz-header">
+            <p class="label">Class 1 Assessment</p>
+            <h1>HTML, CSS, and JavaScript Quiz</h1>
+            <p>Choose one answer for each question and submit to see your score.</p>
+        </header>
+
+        <!-- Score summary is updated by JavaScript -->
+        <section class="score-panel">
+            <p id="bestScore">Best Score: Not attempted yet</p>
+            <p id="questionCount">Questions: 0</p>
+        </section>
+
+        <!-- JavaScript will render all questions inside this form -->
+        <form id="quizForm" class="quiz-form">
+            <div id="questionsContainer"></div>
+
+            <div class="actions">
+                <button type="submit" class="submit-button">Submit Quiz</button>
+                <button type="button" class="reset-button" id="resetButton">Retry</button>
+            </div>
+        </form>
+
+        <!-- Result output appears after submit -->
+        <section class="result-panel" id="resultPanel">
+            <h2>Result</h2>
+            <p>Submit the quiz to see your score.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

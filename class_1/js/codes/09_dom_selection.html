@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fefce8;
+            padding: 30px;
+        }
+
+        .active {
+            color: #ca8a04;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Selection</h1>
+    <p id="intro">This text will be changed using JavaScript.</p>
+    <p class="note">DOM means Document Object Model.</p>
+
+    <script>
+        // JavaScript can select HTML elements from the DOM
+        const introText = document.getElementById("intro");
+        const noteText = document.querySelector(".note");
+
+        // These lines update selected elements
+        introText.textContent = "JavaScript selected this paragraph by ID.";
+        noteText.classList.add("active");
+    </script>
+</body>
+</html>

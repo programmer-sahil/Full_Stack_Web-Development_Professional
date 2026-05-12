@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0fdf4;
+            padding: 30px;
+        }
+
+        /* Grid is useful for two-dimensional layouts */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            max-width: 800px;
+        }
+
+        /* This class styles each grid card */
+        .course-card {
+            background-color: #ffffff;
+            border: 1px solid #bbf7d0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(22, 101, 52, 0.08);
+        }
+
+        @media (max-width: 700px) {
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Grid Layout</h1>
+
+    <!-- Grid places cards into columns and rows -->
+    <div class="course-grid">
+        <div class="course-card">HTML Structure</div>
+        <div class="course-card">CSS Styling</div>
+        <div class="course-card">JavaScript Logic</div>
+    </div>
+</body>
+</html>
