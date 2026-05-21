@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Supports modern characters and symbols -->
+  <meta charset="UTF-8">
+
+  <!-- Makes the app responsive on mobile, tablet, and desktop -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Browser tab title -->
+  <title>Quiz App</title>
+
+  <!-- External CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main quiz container -->
+  <div class="quiz-container">
+
+    <!-- App heading -->
+    <header class="quiz-header">
+      <h1>JavaScript Quiz App</h1>
+      <p>Answer the questions and check your score</p>
+    </header>
+
+    <!-- Quiz card -->
+    <main class="quiz-card">
+
+      <!-- Question number -->
+      <p id="questionNumber">Question 1 of 5</p>
+
+      <!-- Question text will be inserted by JavaScript -->
+      <h2 id="questionText">Question text goes here</h2>
+
+      <!-- Options will be inserted by JavaScript -->
+      <div id="optionsContainer" class="options-container"></div>
+
+      <!-- Feedback message -->
+      <p id="feedbackMessage"></p>
+
+      <!-- Next button -->
+      <button id="nextBtn">Next Question</button>
+
+      <!-- Result area will show after quiz ends -->
+      <div id="resultBox" class="result-box"></div>
+
+    </main>
+
+    <!-- Footer -->
+    <p class="footer-text">Project 8: JavaScript Quiz Logic Practice</p>
+
+  </div>
+
+  <!-- External JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

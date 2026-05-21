@@ -1,0 +1,323 @@
+/*
+  Universal reset.
+  Removes default margin and padding.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+  Body design.
+*/
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+/*
+  Main app container.
+*/
+.app-container {
+  width: 92%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+/*
+  Header section.
+*/
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 36px;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 16px;
+}
+
+/*
+  Main layout uses grid.
+  Left side is form.
+  Right side is student list.
+*/
+.main-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+}
+
+/*
+  Common card design.
+*/
+.form-card,
+.list-card {
+  background-color: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+/*
+  Form title.
+*/
+.form-card h2,
+.list-card h2 {
+  color: #0f172a;
+  margin-bottom: 18px;
+}
+
+/*
+  Form group spacing.
+*/
+.form-group {
+  margin-bottom: 15px;
+}
+
+/*
+  Labels.
+*/
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #334155;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/*
+  Input and select design.
+*/
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+/*
+  Focus effect.
+*/
+input:focus,
+select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/*
+  Main submit button.
+*/
+button {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+/*
+  Add/update button.
+*/
+#submitBtn {
+  width: 100%;
+  padding: 13px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+#submitBtn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/*
+  Cancel button is hidden by default.
+  It will show only during edit mode.
+*/
+.cancel-btn {
+  display: none;
+  width: 100%;
+  padding: 13px;
+  background-color: #64748b;
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.cancel-btn:hover {
+  background-color: #475569;
+}
+
+/*
+  Message style.
+*/
+#message {
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/*
+  Success and error classes added by JavaScript.
+*/
+.success {
+  color: #16a34a;
+}
+
+.error {
+  color: #dc2626;
+}
+
+/*
+  List header.
+*/
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+#studentCount {
+  color: #475569;
+  font-weight: bold;
+}
+
+/*
+  Search input.
+*/
+#searchInput {
+  margin-bottom: 18px;
+}
+
+/*
+  Table wrapper allows horizontal scroll on small screens.
+*/
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/*
+  Table design.
+*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+/*
+  Table cells.
+*/
+th,
+td {
+  padding: 13px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+/*
+  Table header.
+*/
+th {
+  background-color: #f8fafc;
+  color: #334155;
+}
+
+/*
+  Table row hover.
+*/
+tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/*
+  Action buttons wrapper.
+*/
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/*
+  Edit and delete buttons.
+*/
+.edit-btn,
+.delete-btn {
+  padding: 8px 10px;
+  color: white;
+  font-size: 13px;
+}
+
+.edit-btn {
+  background-color: #f59e0b;
+}
+
+.edit-btn:hover {
+  background-color: #d97706;
+}
+
+.delete-btn {
+  background-color: #dc2626;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+/*
+  Empty message row.
+*/
+.empty-row {
+  text-align: center;
+  color: #64748b;
+  font-weight: bold;
+  padding: 25px;
+}
+
+/*
+  Responsive design.
+*/
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    width: 95%;
+  }
+
+  .form-card,
+  .list-card {
+    padding: 18px;
+  }
+
+  .list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

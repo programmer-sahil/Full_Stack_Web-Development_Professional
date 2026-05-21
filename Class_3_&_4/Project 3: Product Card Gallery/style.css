@@ -1,0 +1,248 @@
+/*
+  Universal reset.
+  Removes default spacing from all elements.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+  Body design.
+*/
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+/*
+  Main page container.
+*/
+.page-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+/*
+  Header section.
+*/
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 16px;
+}
+
+/*
+  Search and filter section.
+*/
+.filter-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/*
+  Search input and dropdown common style.
+*/
+#searchInput,
+#categoryFilter {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+/*
+  Search input takes more space.
+*/
+#searchInput {
+  flex: 1;
+}
+
+/*
+  Dropdown fixed width.
+*/
+#categoryFilter {
+  width: 220px;
+}
+
+/*
+  Focus effect.
+*/
+#searchInput:focus,
+#categoryFilter:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/*
+  Product count text.
+*/
+#productCount {
+  margin-bottom: 20px;
+  color: #475569;
+  font-weight: bold;
+}
+
+/*
+  Product grid layout.
+  auto-fit makes the grid responsive automatically.
+*/
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+/*
+  Single product card.
+*/
+.product-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+
+  transition: 0.3s ease;
+}
+
+/*
+  Card hover effect.
+*/
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+}
+
+/*
+  Product image.
+*/
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/*
+  Product content area.
+*/
+.product-info {
+  padding: 18px;
+}
+
+/*
+  Product category badge.
+*/
+.category {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+/*
+  Product title.
+*/
+.product-info h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+/*
+  Product description.
+*/
+.product-info p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+/*
+  Price and button wrapper.
+*/
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*
+  Product price.
+*/
+.price {
+  color: #16a34a;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/*
+  Add to cart button.
+*/
+.add-btn {
+  padding: 9px 12px;
+  border: none;
+  border-radius: 8px;
+
+  background-color: #2563eb;
+  color: white;
+
+  cursor: pointer;
+  font-weight: bold;
+
+  transition: 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/*
+  Empty message when no product is found.
+*/
+.empty-message {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  color: #64748b;
+  grid-column: 1 / -1;
+}
+
+/*
+  Responsive design for mobile.
+*/
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .filter-section {
+    flex-direction: column;
+  }
+
+  #categoryFilter {
+    width: 100%;
+  }
+}

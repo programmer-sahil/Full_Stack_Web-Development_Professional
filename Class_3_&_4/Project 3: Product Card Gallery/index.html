@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Supports modern characters and symbols -->
+  <meta charset="UTF-8">
+
+  <!-- Makes the website responsive on mobile, tablet, and desktop -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Browser tab title -->
+  <title>Product Card Gallery</title>
+
+  <!-- External CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main page wrapper -->
+  <div class="page-container">
+
+    <!-- Page header section -->
+    <header class="header">
+      <h1>Product Card Gallery</h1>
+      <p>Search and filter products using JavaScript</p>
+    </header>
+
+    <!-- Filter and search section -->
+    <section class="filter-section">
+
+      <!-- 
+        Search input.
+        JavaScript will use this input to search products by name.
+      -->
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search product by name..."
+      >
+
+      <!-- 
+        Category dropdown.
+        JavaScript will use this to filter products by category.
+      -->
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="fashion">Fashion</option>
+        <option value="accessories">Accessories</option>
+        <option value="stationery">Stationery</option>
+      </select>
+
+    </section>
+
+    <!-- 
+      Product count message.
+      JavaScript will update this dynamically.
+    -->
+    <p id="productCount"></p>
+
+    <!-- 
+      Product cards will be inserted here using JavaScript.
+    -->
+    <section id="productGrid" class="product-grid"></section>
+
+  </div>
+
+  <!-- External JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

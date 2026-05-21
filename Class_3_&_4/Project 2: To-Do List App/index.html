@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Supports modern characters and symbols -->
+  <meta charset="UTF-8">
+
+  <!-- Makes the page responsive on mobile and desktop -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Browser tab title -->
+  <title>To-Do List App</title>
+
+  <!-- External CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main app container -->
+  <div class="todo-container">
+
+    <!-- App heading -->
+    <h1>To-Do List App</h1>
+
+    <!-- Short subtitle -->
+    <p class="subtitle">Add, complete, and delete your daily tasks</p>
+
+    <!-- Input area -->
+    <div class="input-area">
+
+      <!-- 
+        Task input field.
+        JavaScript will collect the value from this input.
+      -->
+      <input 
+        type="text" 
+        id="taskInput" 
+        placeholder="Enter a new task"
+      >
+
+      <!-- 
+        Button to add task.
+        JavaScript will run when this button is clicked.
+      -->
+      <button id="addTaskBtn">Add Task</button>
+    </div>
+
+    <!-- Error message area -->
+    <p id="errorMessage"></p>
+
+    <!-- 
+      Task list area.
+      JavaScript will dynamically insert tasks inside this div.
+    -->
+    <div id="taskList"></div>
+
+    <!-- Small footer information -->
+    <p class="footer-text">Project 2: JavaScript DOM + CRUD Practice</p>
+
+  </div>
+
+  <!-- External JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

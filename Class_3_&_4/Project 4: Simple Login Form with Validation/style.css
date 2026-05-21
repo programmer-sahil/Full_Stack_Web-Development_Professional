@@ -1,0 +1,240 @@
+/*
+  Universal reset.
+  Removes default browser margin/padding.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+  Body design.
+  Flexbox centers the login card.
+*/
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+
+  background: linear-gradient(135deg, #dbeafe, #eef2ff);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+/*
+  Main login container.
+*/
+.login-container {
+  width: 100%;
+  max-width: 430px;
+
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 18px;
+
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.15);
+}
+
+/*
+  Header section.
+*/
+.login-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.login-header h1 {
+  color: #0f172a;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.login-header p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+/*
+  Space between fields.
+*/
+.form-group {
+  margin-bottom: 18px;
+}
+
+/*
+  Label design.
+*/
+label {
+  display: block;
+  margin-bottom: 7px;
+
+  color: #334155;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/*
+  Input common design.
+*/
+input {
+  width: 100%;
+  padding: 13px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+
+  font-size: 15px;
+  outline: none;
+}
+
+/*
+  Input focus effect.
+*/
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/*
+  Password field wrapper.
+  It keeps password input and show button in one row.
+*/
+.password-box {
+  display: flex;
+  gap: 8px;
+}
+
+/*
+  Password input should take full remaining width.
+*/
+.password-box input {
+  flex: 1;
+}
+
+/*
+  Show/hide button.
+*/
+#togglePassword {
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: #e2e8f0;
+  color: #334155;
+
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+#togglePassword:hover {
+  background-color: #cbd5e1;
+}
+
+/*
+  Small error message under input.
+*/
+small {
+  display: block;
+  margin-top: 6px;
+
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/*
+  Login button.
+*/
+.login-btn {
+  width: 100%;
+  padding: 13px;
+
+  background-color: #2563eb;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/*
+  Final message style.
+*/
+#message {
+  margin-top: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*
+  Success and error classes added by JavaScript.
+*/
+.success {
+  color: #16a34a;
+}
+
+.error {
+  color: #dc2626;
+}
+
+/*
+  Demo credentials box.
+*/
+.demo-box {
+  margin-top: 24px;
+  padding: 15px;
+
+  background-color: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+}
+
+.demo-box h3 {
+  margin-bottom: 8px;
+  color: #0f172a;
+  font-size: 16px;
+}
+
+.demo-box p {
+  color: #475569;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/*
+  Responsive design.
+*/
+@media (max-width: 480px) {
+  .login-container {
+    padding: 24px;
+  }
+
+  .login-header h1 {
+    font-size: 26px;
+  }
+
+  .password-box {
+    flex-direction: column;
+  }
+
+  #togglePassword {
+    padding: 12px;
+  }
+}

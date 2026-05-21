@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Supports modern characters and symbols -->
+  <meta charset="UTF-8">
+
+  <!-- Makes the app responsive on mobile and desktop -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Browser tab title -->
+  <title>Weather App Using API</title>
+
+  <!-- External CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main app container -->
+  <div class="weather-container">
+
+    <!-- App heading -->
+    <h1>Weather App</h1>
+
+    <!-- Subtitle -->
+    <p class="subtitle">Search current weather by city name</p>
+
+    <!-- Search area -->
+    <div class="search-box">
+
+      <!-- 
+        City input.
+        JavaScript will collect city name from this input.
+      -->
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter city name"
+      >
+
+      <!-- 
+        Search button.
+        JavaScript will call API when user clicks this button.
+      -->
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- Message area for loading/error -->
+    <p id="message"></p>
+
+    <!-- Weather result card -->
+    <div id="weatherResult" class="weather-card">
+
+      <!-- Default message before searching -->
+      <p class="default-text">Enter a city name to check weather.</p>
+
+    </div>
+
+    <!-- Footer note -->
+    <p class="footer-text">Project 7: API + JavaScript Practice</p>
+
+  </div>
+
+  <!-- External JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

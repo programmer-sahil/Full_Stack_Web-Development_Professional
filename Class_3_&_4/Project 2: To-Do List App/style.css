@@ -1,0 +1,227 @@
+/* 
+  Universal reset.
+  Removes default margin and padding.
+  box-sizing: border-box makes layout easier.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+  Body design.
+  Flexbox is used to center the app.
+*/
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #dbeafe, #f0f9ff);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+/* Main container */
+.todo-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+
+  padding: 30px;
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #1e293b;
+  margin-bottom: 8px;
+  font-size: 30px;
+}
+
+/* Subtitle */
+.subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+/* Input and button wrapper */
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Task input */
+#taskInput {
+  flex: 1;
+  padding: 12px;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+
+  font-size: 15px;
+  outline: none;
+}
+
+/* Input focus effect */
+#taskInput:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Add task button */
+#addTaskBtn {
+  padding: 12px 18px;
+
+  background-color: #2563eb;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+/* Button hover effect */
+#addTaskBtn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Error message */
+#errorMessage {
+  color: #dc2626;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Task list wrapper */
+#taskList {
+  margin-top: 10px;
+}
+
+/* Single task item */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+
+  padding: 14px;
+  border-radius: 12px;
+
+  margin-bottom: 12px;
+}
+
+/* Task text */
+.task-text {
+  color: #334155;
+  font-size: 15px;
+  flex: 1;
+}
+
+/* Completed task style */
+.task-text.completed {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+/* Buttons wrapper inside task */
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Common small button style */
+.small-btn {
+  padding: 7px 10px;
+  border: none;
+  border-radius: 8px;
+
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+
+  transition: 0.3s ease;
+}
+
+/* Complete button */
+.complete-btn {
+  background-color: #16a34a;
+}
+
+.complete-btn:hover {
+  background-color: #15803d;
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: #dc2626;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* Empty message */
+.empty-message {
+  text-align: center;
+  color: #64748b;
+  background-color: #f8fafc;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px dashed #cbd5e1;
+}
+
+/* Footer text */
+.footer-text {
+  margin-top: 20px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .todo-container {
+    padding: 22px;
+  }
+
+  .input-area {
+    flex-direction: column;
+  }
+
+  #addTaskBtn {
+    width: 100%;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .task-actions {
+    width: 100%;
+  }
+
+  .small-btn {
+    flex: 1;
+  }
+}
